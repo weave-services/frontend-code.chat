@@ -7,7 +7,6 @@ import { GithubLogoIcon } from '@radix-icons/vue'
     <div class=" w-full h-full flex flex-col items-center justify-center ">
       <header class="sticky top-0 flex p-2 md:p-4 w-full z-10">
         <NuxtLink to="/" class="group h-10 flex items-center gap-1 text-xl md:text-3xl font-black">
-          <Logo />
           <span>code.chat</span>
         </NuxtLink>
 
