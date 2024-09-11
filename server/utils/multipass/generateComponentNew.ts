@@ -54,7 +54,7 @@ export default async (event: H3Event<EventHandlerRequest>) => {
   console.log(`> total context prompt tokens (estimate) : ${contextPromptToken}`)
 
   const stream = useOpenAI(event).beta.chat.completions.stream({
-    model: 'gpt-4-1106-preview',
+    model: 'gpt-4o',
     messages: context,
     stream: true,
   })
