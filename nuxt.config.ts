@@ -74,7 +74,7 @@ export default defineNuxtConfig({
     },
   },
   site: {
-    name: 'vue0',
+    name: 'code.chat',
     description: 'Generate Component with simple text prompts.',
     defaultLocale: 'en',
   },
