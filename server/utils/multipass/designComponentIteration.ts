@@ -20,7 +20,7 @@ export default async (event: H3Event<EventHandlerRequest>, component: DBComponen
     {
       role: `system`,
       content:
-        `Your task is to modify a Vue component for a web app, according to the user's request.\n`
+        `DO NOT HALLUCINATE, your task is to modify a Vue component for a web app, according to the user's request.\n`
         + `If you judge it is relevant to do so, you can specify pre-made library components to use in the component update.\n`
         + `You can also specify the use of icons if you see that the user's update request requires it.`,
     },
@@ -45,7 +45,7 @@ export default async (event: H3Event<EventHandlerRequest>, component: DBComponen
   ]
 
   const stream = useOpenAI(event).beta.chat.completions.stream({
-    model: 'gpt-4-1106-preview', // 'gpt-3.5-turbo-1106',
+    model: 'gpt-4o', // 'gpt-3.5-turbo-1106',
     messages: context,
     tools: [
       {
