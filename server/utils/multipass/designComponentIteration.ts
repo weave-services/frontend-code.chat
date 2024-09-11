@@ -47,6 +47,8 @@ export default async (event: H3Event<EventHandlerRequest>, component: DBComponen
   const stream = useOpenAI(event).beta.chat.completions.stream({
     model: 'gpt-4o', // 'gpt-3.5-turbo-1106',
     messages: context,
+    temperature: 0.2,
+    top_p: 1.0,
     tools: [
       {
         type: 'function',
